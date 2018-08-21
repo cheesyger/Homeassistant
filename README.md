@@ -6,7 +6,8 @@ Raspberry Pi 3B
   PS3 Cam für Snips
   Lautsprecher
 Philips Hue
-
+  2 Philips Hue warmweiss Lampen
+  1 smarte Steckdose
 
 geplante Hardware
 
