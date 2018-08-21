@@ -185,6 +185,20 @@ hue:
   bridges:
     - host: 192.168.178.64
       allow_hue_groups: false
+
+
+#Telegram
+
+telegram_bot:
+  - platform: polling
+    api_key: 671514232:AAF8__Ku5JhpbDHwokZCB1L86DZFHC_1Z7k
+    allowed_chat_ids:
+      - 299739089
+
+notify:
+- platform: telegram
+  name: telegram
+  chat_id: 299739089
       
 group: !include groups.yaml
 automation: !include automations.yaml
