@@ -32,3 +32,8 @@ Automatisierungen erstellen
   wenn Plex gestartet wird -> Licht dimmen für 1 Minute -> Licht aus
   wenn Wohnungstür nach 22 Uhr geöffnet wird -> Alarm per Telegramm auf Handy
   wenn Thermomix gestartet wird -> Küchenradio starten
+  
+  nahe Zukunft:
+  Klingel mit Kamera
+    Automatisierung
+    wenn keiner zu Hause-> Foto von klingelnden-> Foto per Telegram an Handy
