@@ -1,0 +1,51 @@
+title: Mein Häuschen
+# Optional background for all views. Check https://developer.mozilla.org/en-US/docs/Web/CSS/background for more examples.
+background: center / cover no-repeat url("/background.png") fixed
+# Exclude entities from "Unused entities" view
+excluded_entities:
+  - weblink.router
+views:
+# Specify a tab icon if you want the view tab to be an icon.
+  - icon: mdi:home-assistant
+    # Title of the view. Will be used as the tooltip for tab icon
+    title: Infos
+    cards:
+        # Entities card will take a list of entities and show their state.
+      - type: entities
+        # Title of the entities card
+        title: Wer ist zu Hause ?
+        # The entities here will be shown in the same order as specified.
+        # Each entry is an entity ID or a map with extra options.
+        entities:
+          - device_tracker.redminote5redmi
+          - device_tracker.honor6x
+          #- entity: light.living_room
+            # Override the name to use
+            #name: LR Lights
+
+        # The markdown card will render markdown text.
+#      - type: markdown
+#        title: Wetter
+#        content: >
+#          Das Wetter für heute
+          
+      - type: weather-forecast
+        entity: weather.dark_sky
+        
+    # View tab title.
+  - title: Multimedia Fernbedienung
+    # Optional unique id for direct access /lovelace/${id}
+    id: MMFB
+    # Optional background (overwrites the global background).
+    background: radial-gradient(crimson, skyblue)
+    # Each view can have a different theme applied. Theme should be defined in the frontend.
+    theme: dark-mode
+    # The cards to show on this view.
+    cards:
+      - type: media-control
+        title: Fernbedienung
+        entity: media_player.samsung_tv_remote
+        
+      - type: media-control
+        title: Fernbedienung
+        entity: media_player.plex_web_chrome

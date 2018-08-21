@@ -1,0 +1,15 @@
+script.gasstation:
+  custom_ui_state_card: state-card-gasstation
+  friendly_name: 'Tankstellen'
+  config:
+    fuel: sensor.fuel
+    e5: true
+    e10: false
+    diesel: true
+    entities:
+      - entity: '4196b5c0-d3d3-4eb6-a9e2-45f4b5ada7f3'
+        street: 'Am Haidchensberg'
+        brand: TANKE
+      - entity: '850fbe93-0ed1-4dfa-9ece-5ffc93992466'
+        street: 'Riesaer Straße'
+        brand: SHELL

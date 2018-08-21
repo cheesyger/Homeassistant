@@ -1,0 +1,191 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Home
+  # Location required to calculate the time the sun rises and sets
+  latitude: !secret latitude
+  longitude: !secret longitude
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: 86
+  # metric for Metric, imperial for Imperial
+  unit_system: metric
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: Europe/Berlin
+  # Customization file
+  customize: !include customize.yaml
+
+# Show links to resources in log and frontend
+#introduction:
+
+# Enables the frontend
+frontend:
+
+# Enables configuration UI
+config:
+
+http:
+  # Secrets are defined in the file secrets.yaml
+  api_password: !secret api_password
+  server_host: 0.0.0.0
+  # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+  # base_url: example.duckdns.org:8123
+  # CORS access is optional
+  cors_allowed_origins:
+    - https://reformedreality.com
+    - http://reformedreality.com
+
+# Checks for available updates
+# Note: This component will send some information about your system to
+# the developers to assist with development of Home Assistant.
+# For more information, please see:
+# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
+updater:
+  # Optional, allows Home Assistant developers to focus on popular components.
+  include_used_components: true
+
+# Discover some devices automatically
+discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time
+history:
+
+# View all events in a logbook
+logbook:
+
+# Enables a map showing the location of tracked devices
+map:
+
+# Track the sun
+sun:
+
+# wetter
+weather:
+  - platform: darksky
+    api_key: !secret wetter_api
+    update_interval:
+     minutes: 10
+    monitored_conditions:
+      - summary
+      - hourly_summary
+      - temperature
+      - temperature_max
+      - temperature_min
+
+#media_player
+
+media_player:
+  - platform: samsungtv
+    host: !secret samsung_host
+    port: 8001
+    name: Samsung TV
+
+  - platform: squeezebox
+    host: !secret squeezebox_host
+    
+  - platform: plex
+    
+
+# Sensoren
+sensor:
+  - platform: moon
+  
+  - platform: command_line
+    name: CPU Temperature
+    command: 'cat /sys/class/thermal/thermal_zone0/temp'
+    unit_of_measurement: '°C'
+    value_template: '{{ value | multiply(0.001) }}'
+    
+  - platform: plex
+    host: !secret plex_host
+    port: 32400
+    token: !secret plex_token
+    
+  - platform: darksky
+    api_key: !secret wetter_api
+    update_interval:
+     minutes: 10
+    monitored_conditions:
+      - summary
+      - hourly_summary
+      - temperature
+      - temperature_max
+      - temperature_min
+    
+      
+#source: https://community.home-assistant.io/t/epson-wf-3540-ink-level-monitoring/21813/4
+  - platform: command_line
+    name: Epson Ink Level Black
+    command: /usr/bin/curl -s -X GET http://192.168.178.21/PRESENTATION/HTML/TOP/PRTINFO.HTML  | awk -F"'" '/Ink_K.PNG/' | awk '{x = index($2, "color2"); if (x==0) { value = substr ($9, 9, 2); printf "%.0f\n", value / 50 * 100; exit;} else {value = substr ($7, 9, 2); printf "%.0f\n", (50 - value) / 50 * 100; exit;}}'
+    unit_of_measurement: '%'
+    scan_interval: 120
+
+  - platform: command_line
+    name: Epson Ink Level Magenta
+    command: /usr/bin/curl -s -X GET http://192.168.178.21/PRESENTATION/HTML/TOP/PRTINFO.HTML  | awk -F"'" '/Ink_M.PNG/' | awk '{x = index($2, "color2"); if (x==0) { value = substr ($9, 9, 2); printf "%.0f\n", value / 50 * 100; exit;} else {value = substr ($7, 9, 2); printf "%.0f\n", (50 - value) / 50 * 100; exit;}}'
+    unit_of_measurement: '%'
+    scan_interval: 120
+
+  - platform: command_line
+    name: Epson Ink Level Yellow
+    command: /usr/bin/curl -s -X GET http://192.168.178.21/PRESENTATION/HTML/TOP/PRTINFO.HTML  | awk -F"'" '/Ink_Y.PNG/' | awk '{x = index($2, "color2"); if (x==0) { value = substr ($9, 9, 2); printf "%.0f\n", value / 50 * 100; exit;} else {value = substr ($7, 9, 2); printf "%.0f\n", (50 - value) / 50 * 100; exit;}}'
+    unit_of_measurement: '%'
+    scan_interval: 120
+
+  - platform: command_line
+    name: Epson Ink Level Cyan
+    command: /usr/bin/curl -s -X GET http://192.168.178.21/PRESENTATION/HTML/TOP/PRTINFO.HTML  | awk -F"'" '/Ink_C.PNG/' | awk '{x = index($2, "color2"); if (x==0) { value = substr ($9, 9, 2); printf "%.0f\n", value / 50 * 100; exit;} else {value = substr ($7, 9, 2); printf "%.0f\n", (50 - value) / 50 * 100; exit;}}'
+    unit_of_measurement: '%'
+    scan_interval: 120
+  
+# Text to speech
+tts:
+  - platform: google
+  
+
+# Cloud
+cloud:
+
+#MQTT
+mqtt:
+  broker: !secret mqtt_broker
+  port: 1883
+  client_id: home-assistant-1
+  username: !secret mqtt_user
+  password: !secret mqtt_password
+  
+#device tracker
+device_tracker:
+  - platform: fritz
+    track_new_devices: True
+    consider_home: 60
+    interval_seconds: 10
+ 
+#panel_iframe 
+panel_iframe:
+  router:
+    title: 'FritzBox'
+    icon: mdi:router-wireless
+    url: 'http://192.168.178.1'
+    
+  nodered:
+    title: 'Node-Red'
+    icon: mdi:call-split
+    url: 'http://192.168.178.47:1880'
+
+  configurator:
+    title: Configurator
+    icon: mdi:wrench
+    url: 'http://192.168.178.47:3218'
+
+
+#hue
+hue:
+  bridges:
+    - host: 192.168.178.64
+      allow_hue_groups: false
+      
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml

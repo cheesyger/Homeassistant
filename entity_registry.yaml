@@ -1,0 +1,70 @@
+media_player.plex_web_chrome:
+  config_entry_id:
+  name:
+  platform: plex
+  unique_id: b8hfewttpo4mj2fo5wsgaqix
+media_player.redmi_note_5:
+  config_entry_id:
+  name:
+  platform: plex
+  unique_id: cd94cd5cd70b7bd6-com-plexapp-android
+media_player.tv_ue58mu640:
+  config_entry_id:
+  name:
+  platform: plex
+  unique_id: rnt0kevnw70kke29isnmeu5y
+media_player.chrome:
+  config_entry_id:
+  name:
+  platform: plex
+  unique_id: hbs7b26cdc7o346nc2z29gh0
+media_player.plex_web_chrome_2:
+  config_entry_id:
+  name:
+  platform: plex
+  unique_id: rkji60kscxcabeai512m3rza
+media_player.mi_pad:
+  config_entry_id:
+  name:
+  platform: plex
+  unique_id: 7016938501061890-com-plexapp-android
+media_player.chrome_2:
+  config_entry_id:
+  name:
+  platform: plex
+  unique_id: zyvr5ofdlnlacox9p5dhaerl
+media_player.chrome_3:
+  config_entry_id:
+  name:
+  platform: plex
+  unique_id: y3ktri1tr8kv0xjlzva9gs3j
+media_player.kuche:
+  config_entry_id:
+  name:
+  platform: squeezebox
+  unique_id: b8:27:eb:44:9a:b9
+media_player.chrome_4:
+  config_entry_id:
+  name:
+  platform: plex
+  unique_id: 47rcf419u1gns9cxlm3peiyj
+light.onoff_plug_1:
+  config_entry_id: 935d467ff1e64a1b96e1436a391e4386
+  name: Schalter 1
+  platform: hue
+  unique_id: 84:18:26:00:00:0e:a6:5a-03
+media_player.kuche_2:
+  config_entry_id:
+  name:
+  platform: squeezebox
+  unique_id: b8:27:eb:32:5f:43
+light.Schlafzimmer:
+  config_entry_id: 935d467ff1e64a1b96e1436a391e4386
+  name: Schlafzimmer
+  platform: hue
+  unique_id: 00:17:88:01:02:d2:29:9b-0b
+light.Kinderzimmer:
+  config_entry_id: 935d467ff1e64a1b96e1436a391e4386
+  name: Kinderzimmer
+  platform: hue
+  unique_id: 00:17:88:01:02:cf:84:97-0b

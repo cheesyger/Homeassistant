@@ -1,0 +1,54 @@
+sensoren:
+  view: yes
+  name: Infos
+  entities:
+    - sun.sun
+    - sensor.moon
+    - sensor.cpu_temperature
+    - sensor.openweathermap
+    - sensor.plex
+    - weather.dark_sky
+
+Drucker:
+  name: Patronen
+  entities:
+    - sensor.epson_ink_level_black
+    - sensor.epson_ink_level_cyan
+    - sensor.epson_ink_level_magenta
+    - sensor.epson_ink_level_yellow
+
+Wohnzimmer:
+  view: yes
+  name: Wohnzimmer
+  entities:
+    - light.onoff_plug_1
+    - media_player.samsung_tv_remote
+
+Schlafzimmer:
+  view: yes
+  name: Schlafzimmer
+  entities:
+    - light.hue_white_lamp_2
+    
+Küche:
+  view: yes
+  name: Küche
+  entities:
+    - device_tracker.thermomix540145
+    - mediaplayer.kuche2
+
+Kinderzimmer:
+  view: yes
+  name: Kinderzimmer
+  entities:
+    - device_tracker.toniebox
+    - light.hue_white_lamp_2
+
+Multimedia:
+  view: yes
+  icon: mdi:cast-connected
+  entities:
+    - media_player.plex
+    - media_player.samsung_tv
+    - media_player.kuche_2
+
