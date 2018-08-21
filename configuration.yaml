@@ -158,7 +158,7 @@ mqtt:
 #device tracker
 device_tracker:
   - platform: fritz
-    track_new_devices: True
+    track_new_devices: false
     consider_home: 60
     interval_seconds: 10
  
