@@ -191,14 +191,14 @@ hue:
 
 telegram_bot:
   - platform: polling
-    api_key: 671514232:AAF8__Ku5JhpbDHwokZCB1L86DZFHC_1Z7k
+    api_key: !secret telegram_api
     allowed_chat_ids:
-      - 299739089
+      - !secret telegram_id
 
 notify:
 - platform: telegram
   name: telegram
-  chat_id: 299739089
+  chat_id: !secret telegram_id
       
 group: !include groups.yaml
 automation: !include automations.yaml
