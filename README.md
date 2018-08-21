@@ -28,6 +28,6 @@ Automatisierungen erstellen
   Zimmertemperatur über 20 Grad -> Heizung aus
   Fenster auf -> Heizung aus
   Fenster zu -> Heizung an
-  wenn Plex gestartet wird -> Licht aus
+  wenn Plex gestartet wird -> Licht dimmen für 1 Minute -> Licht aus
   wenn Wohnungstür nach 22 Uhr geöffnet wird -> Alarm per Telegramm auf Handy
   wenn Thermomix gestartet wird -> Küchenradio starten
