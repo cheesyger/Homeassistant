@@ -1,4 +1,4 @@
-sensoren:
+Infos:
   view: yes
   name: Infos
   entities:
@@ -8,6 +8,8 @@ sensoren:
     - sensor.openweathermap
     - sensor.plex
     - weather.dark_sky
+    - group.devicetracker
+    - group.drucker
 
 Drucker:
   name: Patronen
@@ -28,7 +30,7 @@ Wohnzimmer:
   name: Wohnzimmer
   entities:
     - light.onoff_plug_1
-    - media_player.samsung_tv_remote
+    - media_player.samsung_tv
 
 Schlafzimmer:
   view: yes
