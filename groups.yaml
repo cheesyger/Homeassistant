@@ -17,6 +17,12 @@ Drucker:
     - sensor.epson_ink_level_magenta
     - sensor.epson_ink_level_yellow
 
+Devicetracker:
+  name: Wer ist zu Hause ?
+  entities:
+    - device_tracker.redminote5redmi
+    - device_tracker.honor6x
+
 Wohnzimmer:
   view: yes
   name: Wohnzimmer
