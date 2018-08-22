@@ -24,6 +24,7 @@ Snips Hue, Heizung, Logitech Media Server
 MQTT verstehen
 Node Red verstehen
 Telegram einrichten | erledigt am 21.08
+PS4 hinzufügen
 Automatisierungen erstellen
   Zimmertemperatur unter 18 Grad -> Heizung an
   Zimmertemperatur über 20 Grad -> Heizung aus
