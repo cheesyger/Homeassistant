@@ -33,7 +33,7 @@ Automatisierungen erstellen
   wenn Wohnungstür nach 22 Uhr geöffnet wird -> Alarm per Telegramm auf Handy
   wenn Thermomix gestartet wird -> Küchenradio starten
   wenn Sensorbatterie leer -> Nachricht auf Telefon
-  wenn keiner zu hause und man nach hause kommt und Tür offnet -> licht im flur an, wenn helligkeit im flur unter 50lux
+  wenn keiner zu hause und man nach hause kommt und Tür offnet -> licht im flur an, wenn helligkeit im flur 0lux
   
   nahe Zukunft:
   Klingel mit Kamera
