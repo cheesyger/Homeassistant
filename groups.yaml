@@ -29,9 +29,8 @@ Wohnzimmer:
   view: yes
   name: Wohnzimmer
   entities:
-    - light.onoff_plug_1
     - media_player.samsung_tv
-
+    - media_player.ps4
 Schlafzimmer:
   view: yes
   name: Schlafzimmer
@@ -51,6 +50,7 @@ Kinderzimmer:
   entities:
     - device_tracker.toniebox
     - light.hue_white_lamp_2
+    - light.onoff_plug_1
 
 Multimedia:
   view: yes
@@ -60,3 +60,6 @@ Multimedia:
     - media_player.samsung_tv
     - media_player.kuche_2
 
+Home:
+  view: no
+  name: Home
