@@ -23,8 +23,8 @@ To Do Liste:
 Snips Hue, Heizung, Logitech Media Server
 MQTT verstehen
 Node Red verstehen
-Telegram einrichten | erledigt am 21.08
-PS4 hinzufügen
+Telegram einrichten ✓ 21.08.2018
+PS4 hinzufügen ✓ 22.08.2018
 Automatisierungen erstellen
   Zimmertemperatur unter 18 Grad -> Heizung an
   Zimmertemperatur über 20 Grad -> Heizung aus
