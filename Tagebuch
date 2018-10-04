@@ -15,3 +15,8 @@ PS4 hinzugefügt zu Wohnzimmer ✓
 23.08.2018
 Home Assistant Update auf 0.75.1
 Bug mit Philips Hue -> neu hinzugefügt -> läuft wieder
+
+04.10.2018
+
+hassctl installiert
+https://blog.kalavala.net/homeassistant/sudoer/2018/01/12/restart-gui.html
